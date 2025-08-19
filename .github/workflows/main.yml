@@ -3,12 +3,12 @@ on:
     branches:
     - main
     - release/*
-  jobs:
+jobs:
   test:
   - name: Send email
-  uses: devellany/send-mailer@v1.0.2
-  with:
-    host: smtp.google.com
+    uses: devellany/send-mailer@v1.0.2
+    with:
+      host: smtp.google.com
       account: ${{secrets.ACCOUNT}}
       password: ${{secrets.MAIL_PASSWORD}}
       sender: devellany
@@ -16,5 +16,4 @@ on:
       to: devellay@dico.me
       subject: mail title.
       body: your messages.
-      # Optional content type (defaults to text/plain)
       contentType: text/plain

@@ -6,8 +6,8 @@ on:
 jobs:
   test:
   - name: Send email
-    runs-on: ubuntu-latest
     uses: devellany/send-mailer@v1.0.2
+    runs-on: ubuntu-latest
     with:
       host: smtp.google.com
       account: ${{secrets.ACCOUNT}}
